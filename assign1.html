@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <title> Assignment1 </title>
+    <link rel="stylesheet" href="assign1.css">
+</head>
+<body>
+    <section id="header">
+        <div class="container">
+            <img src="images/Decor.png" class="logo">
+            <div class="header_text">
+                <h1>This is the header-text.<br>You can use br to change the line.</h1>
+                <span class="square"></span>
+                <p>This is an example of a paragraph, This is an example of a paragraph, This is an example of a paragraph</p>
+                <button class="common_btn">Begin shopping!</button>
+                <div class="lines">
+                    <span class="line1"></span><br>
+                    <span class="line2"></span><br>
+                    <span class="line3"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <nav class="lineNav">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">CONTACT US</a></li>
+            <li><a href="#">ON SALE</a></li>
+        </ul>
+    </nav>
+    <img src="images/..." id="menuBtn">
+    <script>
+        var lineNav = document.getElementById("lineNav");
+        var menuBtn = document.getElementById("menuBtn");
+        menuBtn.onclick = function(){
+            if(lineNav.style.right == "-250px") lineNav.style.right = "0px";
+            else lineNav.style.right = "-250px";
+        }
+    </script>
+    
+</body>
+
+</html>
