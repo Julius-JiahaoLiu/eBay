@@ -1,0 +1,252 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Lora', serif;
+}
+#header{ 
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    margin-top: 100px;
+    margin-left: 100px;
+}
+.logo{
+    margin-top: 30px;
+    width: 100px;
+}
+.header_text{
+    max-width: 350px;
+    margin-top: 100px;
+}
+.square{
+    height: 18px;
+    width: 18px;
+    margin: 30px 0;
+    background-color: cadetblue;
+    display: inline-block;
+}
+.common_btn{
+    padding: 18px 40px;
+    background: transparent;
+    outline: none;
+    border: 2px solid cadetblue;
+    font-weight: bold;
+    cursor: pointer;
+}
+p{
+    font-size: 16px;
+    line-height: 18px;
+    color: black;
+}
+.header_text button{
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+.line1{
+    height: 15px;
+    width: 15px;
+    background: cadetblue;
+    display: inline-block;
+}
+.line2{
+    height: 1px;
+    width: 30px;
+    background: cadetblue;
+    display: inline-block;
+}
+.line3{
+    height: 1px;
+    width: 45px;
+    background: cadetblue;
+    display: inline-block;
+}
+.lines{
+    line-height: 10px;
+}
+
+#rightNav{
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background: cadetblue;
+    z-index: 2;
+    transition: 0.5s;
+}
+nav ul li{
+    margin: 50px 20px;
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+#menuBtn{
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    position: fixed; /* relative position on screen */
+    right: 20px;
+    top: 20px;
+    z-index: 2;
+
+}
+
+/* about section  */
+#about{
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.leftAbout{
+    flex-basis: 50%;
+}
+.leftAbout img{
+    margin: 100px 50px;
+    align-items: center;
+    width: 80%;
+}
+.rightAbout{
+    flex-basis: 50%;
+    text-align: right;
+}
+.about_text{
+    max-width: 500px;
+    margin-right: 100px;
+    display: inline-block;
+}
+.about_text p{
+    margin: 20px 0;
+    font-size: 20px;
+    font-style: italic;
+    color: gray;
+}
+
+/* features */
+#features{
+    padding: 50px 0;
+}
+.features_heading h1{
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    font-size: 35px;
+    font-weight: 800;
+    color: rgba(5,57,193,255);
+}
+.features_row{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.features_column{
+    width: 45%;
+    padding: 20px 20px;
+    text-align: center;
+}
+.features_column img{
+    max-width: 100%; /* Set the maximum width of 100% for the images */
+    height: auto; 
+}
+.features_column h2{
+    padding: 20px 0;
+    font-size: 20px;
+    color: rgba(5,57,193,255);
+}
+
+/* contact */
+.contact_row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.contact_left_col, .contact_right_col{
+    flex-basis: 50%;
+}
+.contact_right_col img{
+    width: 100%; 
+}
+
+form{
+    max-width: 350px;
+    margin: 30px 100px;
+}
+form input{
+    width: 100%;
+    padding: 20px 10px;
+    margin: 5px 0;
+    outline: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(5,57,193,255);
+}
+.Btn_box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.Btn_box button{
+    flex-basis: 48%;
+    padding: 18px 0;
+}
+
+/* footer */
+#footer{
+    padding: 50px 0 30px;
+}
+hr{
+    width: 100%;
+    border-top: 1px solid rgba(5,57,193,255);
+    border: 1px solid rgba(5,57,193,255);
+}
+.footer_row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer_left_col{
+    flex-basis: 50%;
+    margin-top: 30px;
+}
+.footer_right_col{
+    flex-basis: 35%;
+} 
+.footer_links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.link_title h4{
+    color: rgba(5,57,193,255);
+    margin-bottom: 20px;
+}
+.link_title small{
+    font-size: 13px;
+    color: #777;
+}
+.footer_info{
+    font-size: 20px;
+    color: rgba(5,57,193,255);
+}
+
+/* social icons */
+.social_icons{
+    width: 50px;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    z-index: 1;
+}
+.social_icons h4{
+    width: 20px;
+    display: block;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
