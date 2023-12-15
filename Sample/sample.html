@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <title> Assignment1 </title>
+    <link rel="stylesheet" href="selflearn1.css">
+    <!-- enbed google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap" rel="stylesheet">
+    <!-- for the hyperlink of Navigation Menu  -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+</head>
+<body>
+    <section id="header">
+        <div class="container">
+            <img src="images/..." class="logo">
+            <div class="header_text">
+                <h1>This is the header-text.<br>You can use br to change the line.</h1>
+                <span class="square"></span>
+                <p>This is an example of a paragraph, This is an example of a paragraph, This is an example of a paragraph</p>
+                <button class="common_btn">Begin shopping!</button>
+                <div class="lines">
+                    <span class="line1"></span><br>
+                    <span class="line2"></span><br>
+                    <span class="line3"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about -->
+    <section id="about">
+        <div class="leftAbout">
+            <img src="images/...">
+        </div>
+        <div class="rightAbout">
+            <div class="about_text">
+                <h1>About Us</h1>
+                <span class="square"></span>
+                <p>The paragraph of About US....</p>
+                <div class="lines">
+                    <span class="line1"></span><br>
+                    <span class="line2"></span><br>
+                    <span class="line3"></span>
+                </div>
+                <p>sakdcsa, asldufioxsanfwk, xjaoiusfwjklwkej,kjlsajdfoiuwofxsb</p>
+            </div>
+        </div>
+    </section>
+    <!-- features -->
+    <section id="features">
+        <div class="features_heading">
+            <h1>Defining Styling Since 1965</h1>
+        </div>
+        <div class="features_row">
+            <div class="features_column">
+                <img src="images/...">
+                <h2>Dector</h2>
+            </div>
+            <div class="features_column">
+                <img src="images/..">
+                <h2>Your Bedroom</h2>
+            </div>
+        </div>
+        <div class="features_row">
+            <div class="features_column">
+                <img src="images/">
+                <h2>Your Kitchen</h2>
+            </div>
+            <div class="features_column">
+                <img src="images/...">
+                <h2>Your Bathroom</h2>
+            </div>
+        </div>
+    </section>
+    <!-- contact  -->
+    <section id="contact">
+        <div class="contact_row">
+            <div class="contact_left_col">
+                <form>
+                    <input type="Username" placeholder="Enter your username">
+                    <input type="Email" placeholder="Enter your email">
+                    <input type="Password" placeholder="Enter your password">
+                    <div class="Btn_box">
+                        <button class="common_btn">Sign Up Now!</button>
+                        <button class="common_btn">Start Free Trail!</button>
+                    </div>
+                </form>
+            </div>
+            <div class="contact_right_col">
+                <img src="images/...">
+            </div>
+        </div>
+    </section>
+    <!-- footer  -->
+    <section id="footer">
+        <div class="container footer_row">
+            <hr>
+            <div class="footer_left_col">
+                <div class="footer_links">
+                    <div class="link_title">
+                        <h4>Product</h4>
+                        <small>Our plan and Free trail</small><br>
+                    </div>
+                    <div class="link_title">
+                        <h4>About us</h4>
+                        <small>Request Demo</small><br>
+                    </div>
+                    <div class="link_title">
+                        <h4>Support</h4>
+                        <small>Features Contact</small><br>
+                    </div>
+                    <div class="link_title">
+                        <h4>Explore</h4>
+                        <small>Find a nonprofit</small><br>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_right_col">
+                <div class="footer_info">
+                    <small>jiahaoliu34@gmail.com</small>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- social icons -->
+    <div class="social_icons">
+        <h4>Twitter</h4>
+        <h4>Instagram</h4>
+        <h4>Linkedin</h4>
+        <h4>Facebook</h4>
+    </div>
+    <!-- Navigation and Menu  -->
+    <nav id="rightNav">
+        <ul>
+            <li><a href="#header">HOME</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#features">Our features</a></li>
+            <li><a href="#contact">Join Us</a></li>
+            <li><a href="#footer">Contact Us</a></li>
+        </ul>
+    </nav>
+    <img src="images/..." id="menuBtn">
+    <script>
+        var rightNav = document.getElementById("rightNav");
+        var menuBtn = document.getElementById("menuBtn");
+        // rightNav.style.right = "-250px";
+        menuBtn.onclick = function(){
+            if(rightNav.style.right == "-250px") rightNav.style.right = "0px";
+            else rightNav.style.right = "-250px";
+        }
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+    
+</body>
+</html>
