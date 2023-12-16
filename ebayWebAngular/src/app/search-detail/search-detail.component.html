@@ -1,0 +1,23 @@
+<div class="d-flex justify-content-end flex-wrap">
+    <button type="button" class="btn" style="border-radius: 5px 5px 0 0;" [ngClass]="{ 'btn-dark': activeTab === 1, 'btn-white': activeTab !== 1 }" (click)="changeTab(1)">Product</button>
+    <button type="button" class="btn" style="border-radius: 5px 5px 0 0;" [ngClass]="{ 'btn-dark': activeTab === 2, 'btn-white': activeTab !== 2 }" (click)="changeTab(2)">Photos</button>
+    <button type="button" class="btn" style="border-radius: 5px 5px 0 0;" [ngClass]="{ 'btn-dark': activeTab === 3, 'btn-white': activeTab !== 3 }" (click)="changeTab(3)">Shipping</button>
+    <button type="button" class="btn" style="border-radius: 5px 5px 0 0;" [ngClass]="{ 'btn-dark': activeTab === 4, 'btn-white': activeTab !== 4 }" (click)="changeTab(4)">Seller</button>
+    <button type="button" class="btn" style="border-radius: 5px 5px 0 0;" [ngClass]="{ 'btn-dark': activeTab === 5, 'btn-white': activeTab !== 5 }" (click)="changeTab(5)">Similar Products</button>
+</div>
+<hr style="border: none; background-color: lightgray; height: 1px; margin: 0; padding: 0; margin-bottom: 10px;" />
+<div *ngIf="activeTab === 1">
+    <app-product-tag [Item]="itemDetails.Item"></app-product-tag>
+</div>
+<div *ngIf="activeTab === 2">
+    <app-photos-tag [itemTitle]="itemDetails.Item.Title"></app-photos-tag>
+</div>
+<div *ngIf="activeTab === 3">
+    <app-shipping-tag [itemResults]="itemResults"></app-shipping-tag>
+</div>
+<div *ngIf="activeTab === 4">
+    <app-seller-tag [Item]="itemDetails.Item"></app-seller-tag>
+</div>
+<div *ngIf="activeTab === 5">
+    <app-similar-tag [itemId]="itemDetails.Item.ItemID"></app-similar-tag>
+</div>

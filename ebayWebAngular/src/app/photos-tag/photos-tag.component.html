@@ -1,0 +1,27 @@
+<div class="row">
+  <!-- First column with 2 images -->
+  <div class="col-12 col-md-4">
+    <div class="border border-dark border-5 my-2" *ngFor="let link of links.slice(0, 2)">
+      <a [href]="link.link" target="_blank">
+        <img [src]="link.link" class="img-fluid img-border" alt="Image">
+      </a>
+    </div>
+  </div>
+  <!-- Second and third columns with 3 images each -->
+  <div class="col-12 col-md-4">
+    <div class="border border-dark border-5 my-2" *ngFor="let link of links.slice(2, 5)">
+      <a [href]="link.link" target="_blank">
+        <img [src]="link.link" class="img-fluid img-border" alt="Image">
+      </a>
+    </div>
+  </div>
+  <div class="col-12 col-md-4">
+    <div class="border border-dark border-5 my-2" *ngFor="let link of links.slice(5)">
+      <a [href]="link.link" target="_blank">
+        <img [src]="link.link" class="img-fluid img-border" alt="Image">
+      </a>
+    </div>
+  </div>
+</div>
+
+  

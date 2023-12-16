@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		913F48682B10620800583DD5 /* favoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913F48672B10620800583DD5 /* favoritesView.swift */; };
+		9159D6C22B11115F00C5E7E9 /* searchDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159D6C12B11115F00C5E7E9 /* searchDetailModel.swift */; };
+		9159D6C42B11761200C5E7E9 /* infoTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159D6C32B11761200C5E7E9 /* infoTabView.swift */; };
+		9181BF352B00482800C28A19 /* HW4App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9181BF342B00482800C28A19 /* HW4App.swift */; };
+		9181BF372B00482800C28A19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9181BF362B00482800C28A19 /* ContentView.swift */; };
+		9181BF392B00482A00C28A19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9181BF382B00482A00C28A19 /* Assets.xcassets */; };
+		9181BF3C2B00482A00C28A19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9181BF3B2B00482A00C28A19 /* Preview Assets.xcassets */; };
+		91AF37CC2B092B200074AA09 /* zipcodeSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF37CB2B092B200074AA09 /* zipcodeSearchModel.swift */; };
+		91AF37CE2B099C4A0074AA09 /* zipcodeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF37CD2B099C490074AA09 /* zipcodeSelectionView.swift */; };
+		91AF37D02B09E6990074AA09 /* keywordAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF37CF2B09E6990074AA09 /* keywordAlertView.swift */; };
+		91AF37D22B09EB330074AA09 /* searchFormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF37D12B09EB330074AA09 /* searchFormModel.swift */; };
+		91AF37D42B09EBCB0074AA09 /* searchFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF37D32B09EBCB0074AA09 /* searchFormView.swift */; };
+		91AF37D62B0A839E0074AA09 /* ipInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF37D52B0A839E0074AA09 /* ipInfoModel.swift */; };
+		91AF37DC2B0BDA610074AA09 /* searchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF37DB2B0BDA610074AA09 /* searchResultView.swift */; };
+		91AF37DE2B0BEF080074AA09 /* ebayLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91AF37DD2B0BEF080074AA09 /* ebayLaunchScreen.storyboard */; };
+		91AF37E12B0C1AFE0074AA09 /* searchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF37E02B0C1AFE0074AA09 /* searchDetailView.swift */; };
+		91AF37E52B0C1F630074AA09 /* imageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF37E42B0C1F630074AA09 /* imageView.swift */; };
+		91AF37E72B0C1F840074AA09 /* imageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF37E62B0C1F840074AA09 /* imageViewModel.swift */; };
+		91AF37EB2B0D7A010074AA09 /* mongodbModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF37EA2B0D7A010074AA09 /* mongodbModel.swift */; };
+		91EB6FB22B12B8A500C9F832 /* shippingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EB6FB12B12B8A500C9F832 /* shippingTabView.swift */; };
+		91EB6FB42B131BA300C9F832 /* photosTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EB6FB32B131BA300C9F832 /* photosTabView.swift */; };
+		91EB6FB62B131C5900C9F832 /* googleSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EB6FB52B131C5900C9F832 /* googleSearchModel.swift */; };
+		91EB6FB82B132E5900C9F832 /* searchSimilarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EB6FB72B132E5900C9F832 /* searchSimilarModel.swift */; };
+		91EB6FBA2B13324300C9F832 /* similarTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EB6FB92B13324300C9F832 /* similarTabView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9124F2462B02EF4900246239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		913F48672B10620800583DD5 /* favoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favoritesView.swift; sourceTree = "<group>"; };
+		9159D6C12B11115F00C5E7E9 /* searchDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchDetailModel.swift; sourceTree = "<group>"; };
+		9159D6C32B11761200C5E7E9 /* infoTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoTabView.swift; sourceTree = "<group>"; };
+		9181BF312B00482800C28A19 /* eBay Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eBay Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9181BF342B00482800C28A19 /* HW4App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW4App.swift; sourceTree = "<group>"; };
+		9181BF362B00482800C28A19 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9181BF382B00482A00C28A19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9181BF3B2B00482A00C28A19 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		91AF37CB2B092B200074AA09 /* zipcodeSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zipcodeSearchModel.swift; sourceTree = "<group>"; };
+		91AF37CD2B099C490074AA09 /* zipcodeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zipcodeSelectionView.swift; sourceTree = "<group>"; };
+		91AF37CF2B09E6990074AA09 /* keywordAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keywordAlertView.swift; sourceTree = "<group>"; };
+		91AF37D12B09EB330074AA09 /* searchFormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchFormModel.swift; sourceTree = "<group>"; };
+		91AF37D32B09EBCB0074AA09 /* searchFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchFormView.swift; sourceTree = "<group>"; };
+		91AF37D52B0A839E0074AA09 /* ipInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ipInfoModel.swift; sourceTree = "<group>"; };
+		91AF37DB2B0BDA610074AA09 /* searchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchResultView.swift; sourceTree = "<group>"; };
+		91AF37DD2B0BEF080074AA09 /* ebayLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ebayLaunchScreen.storyboard; sourceTree = "<group>"; };
+		91AF37E02B0C1AFE0074AA09 /* searchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchDetailView.swift; sourceTree = "<group>"; };
+		91AF37E42B0C1F630074AA09 /* imageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageView.swift; sourceTree = "<group>"; };
+		91AF37E62B0C1F840074AA09 /* imageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = imageViewModel.swift; path = ../SearchDetailViews/imageViewModel.swift; sourceTree = "<group>"; };
+		91AF37EA2B0D7A010074AA09 /* mongodbModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mongodbModel.swift; sourceTree = "<group>"; };
+		91EB6FB12B12B8A500C9F832 /* shippingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shippingTabView.swift; sourceTree = "<group>"; };
+		91EB6FB32B131BA300C9F832 /* photosTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photosTabView.swift; sourceTree = "<group>"; };
+		91EB6FB52B131C5900C9F832 /* googleSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = googleSearchModel.swift; sourceTree = "<group>"; };
+		91EB6FB72B132E5900C9F832 /* searchSimilarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchSimilarModel.swift; sourceTree = "<group>"; };
+		91EB6FB92B13324300C9F832 /* similarTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = similarTabView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9181BF2E2B00482800C28A19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		913F48662B1061E000583DD5 /* FavoritesViews */ = {
+			isa = PBXGroup;
+			children = (
+				913F48672B10620800583DD5 /* favoritesView.swift */,
+			);
+			path = FavoritesViews;
+			sourceTree = "<group>";
+		};
+		9181BF282B00482800C28A19 = {
+			isa = PBXGroup;
+			children = (
+				9181BF332B00482800C28A19 /* HW4 */,
+				9181BF322B00482800C28A19 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9181BF322B00482800C28A19 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9181BF312B00482800C28A19 /* eBay Search.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9181BF332B00482800C28A19 /* HW4 */ = {
+			isa = PBXGroup;
+			children = (
+				91AF37EA2B0D7A010074AA09 /* mongodbModel.swift */,
+				913F48662B1061E000583DD5 /* FavoritesViews */,
+				91AF37DF2B0C1AD80074AA09 /* SearchDetailViews */,
+				91AF37D82B0BD57D0074AA09 /* SearchResultViews */,
+				91A0CEFF2B059CAE0007D46F /* SearchFormViews */,
+				9124F2462B02EF4900246239 /* Info.plist */,
+				9181BF342B00482800C28A19 /* HW4App.swift */,
+				9181BF362B00482800C28A19 /* ContentView.swift */,
+				9181BF382B00482A00C28A19 /* Assets.xcassets */,
+				9181BF3A2B00482A00C28A19 /* Preview Content */,
+				91AF37DD2B0BEF080074AA09 /* ebayLaunchScreen.storyboard */,
+			);
+			path = HW4;
+			sourceTree = "<group>";
+		};
+		9181BF3A2B00482A00C28A19 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9181BF3B2B00482A00C28A19 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		91A0CEFF2B059CAE0007D46F /* SearchFormViews */ = {
+			isa = PBXGroup;
+			children = (
+				91AF37D32B09EBCB0074AA09 /* searchFormView.swift */,
+				91AF37CB2B092B200074AA09 /* zipcodeSearchModel.swift */,
+				91AF37CD2B099C490074AA09 /* zipcodeSelectionView.swift */,
+				91AF37CF2B09E6990074AA09 /* keywordAlertView.swift */,
+				91AF37D12B09EB330074AA09 /* searchFormModel.swift */,
+				91AF37D52B0A839E0074AA09 /* ipInfoModel.swift */,
+			);
+			path = SearchFormViews;
+			sourceTree = "<group>";
+		};
+		91AF37D82B0BD57D0074AA09 /* SearchResultViews */ = {
+			isa = PBXGroup;
+			children = (
+				91AF37E42B0C1F630074AA09 /* imageView.swift */,
+				91AF37E62B0C1F840074AA09 /* imageViewModel.swift */,
+				91AF37DB2B0BDA610074AA09 /* searchResultView.swift */,
+			);
+			path = SearchResultViews;
+			sourceTree = "<group>";
+		};
+		91AF37DF2B0C1AD80074AA09 /* SearchDetailViews */ = {
+			isa = PBXGroup;
+			children = (
+				91AF37E02B0C1AFE0074AA09 /* searchDetailView.swift */,
+				9159D6C12B11115F00C5E7E9 /* searchDetailModel.swift */,
+				9159D6C32B11761200C5E7E9 /* infoTabView.swift */,
+				91EB6FB12B12B8A500C9F832 /* shippingTabView.swift */,
+				91EB6FB32B131BA300C9F832 /* photosTabView.swift */,
+				91EB6FB52B131C5900C9F832 /* googleSearchModel.swift */,
+				91EB6FB72B132E5900C9F832 /* searchSimilarModel.swift */,
+				91EB6FB92B13324300C9F832 /* similarTabView.swift */,
+			);
+			path = SearchDetailViews;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9181BF302B00482800C28A19 /* eBay Search */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9181BF3F2B00482A00C28A19 /* Build configuration list for PBXNativeTarget "eBay Search" */;
+			buildPhases = (
+				9181BF2D2B00482800C28A19 /* Sources */,
+				9181BF2E2B00482800C28A19 /* Frameworks */,
+				9181BF2F2B00482800C28A19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "eBay Search";
+			productName = HW4;
+			productReference = 9181BF312B00482800C28A19 /* eBay Search.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9181BF292B00482800C28A19 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					9181BF302B00482800C28A19 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 9181BF2C2B00482800C28A19 /* Build configuration list for PBXProject "HW4" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9181BF282B00482800C28A19;
+			productRefGroup = 9181BF322B00482800C28A19 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9181BF302B00482800C28A19 /* eBay Search */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9181BF2F2B00482800C28A19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9181BF3C2B00482A00C28A19 /* Preview Assets.xcassets in Resources */,
+				91AF37DE2B0BEF080074AA09 /* ebayLaunchScreen.storyboard in Resources */,
+				9181BF392B00482A00C28A19 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9181BF2D2B00482800C28A19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91AF37CC2B092B200074AA09 /* zipcodeSearchModel.swift in Sources */,
+				91AF37EB2B0D7A010074AA09 /* mongodbModel.swift in Sources */,
+				91AF37E52B0C1F630074AA09 /* imageView.swift in Sources */,
+				91AF37E72B0C1F840074AA09 /* imageViewModel.swift in Sources */,
+				913F48682B10620800583DD5 /* favoritesView.swift in Sources */,
+				91EB6FB62B131C5900C9F832 /* googleSearchModel.swift in Sources */,
+				91AF37D02B09E6990074AA09 /* keywordAlertView.swift in Sources */,
+				91AF37D62B0A839E0074AA09 /* ipInfoModel.swift in Sources */,
+				91EB6FB42B131BA300C9F832 /* photosTabView.swift in Sources */,
+				91AF37E12B0C1AFE0074AA09 /* searchDetailView.swift in Sources */,
+				91AF37DC2B0BDA610074AA09 /* searchResultView.swift in Sources */,
+				91AF37CE2B099C4A0074AA09 /* zipcodeSelectionView.swift in Sources */,
+				9159D6C42B11761200C5E7E9 /* infoTabView.swift in Sources */,
+				9181BF372B00482800C28A19 /* ContentView.swift in Sources */,
+				91EB6FB22B12B8A500C9F832 /* shippingTabView.swift in Sources */,
+				91AF37D42B09EBCB0074AA09 /* searchFormView.swift in Sources */,
+				91EB6FBA2B13324300C9F832 /* similarTabView.swift in Sources */,
+				91AF37D22B09EB330074AA09 /* searchFormModel.swift in Sources */,
+				9159D6C22B11115F00C5E7E9 /* searchDetailModel.swift in Sources */,
+				9181BF352B00482800C28A19 /* HW4App.swift in Sources */,
+				91EB6FB82B132E5900C9F832 /* searchSimilarModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9181BF3D2B00482A00C28A19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9181BF3E2B00482A00C28A19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9181BF402B00482A00C28A19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HW4/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HW4/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "this app requires user location!";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "this app requires user location!";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = ebayLaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jliu2620.HW4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9181BF412B00482A00C28A19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HW4/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HW4/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "this app requires user location!";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "this app requires user location!";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = ebayLaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jliu2620.HW4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9181BF2C2B00482800C28A19 /* Build configuration list for PBXProject "HW4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9181BF3D2B00482A00C28A19 /* Debug */,
+				9181BF3E2B00482A00C28A19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9181BF3F2B00482A00C28A19 /* Build configuration list for PBXNativeTarget "eBay Search" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9181BF402B00482A00C28A19 /* Debug */,
+				9181BF412B00482A00C28A19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9181BF292B00482800C28A19 /* Project object */;
+}

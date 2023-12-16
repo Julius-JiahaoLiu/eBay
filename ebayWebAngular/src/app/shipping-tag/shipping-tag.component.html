@@ -1,0 +1,38 @@
+<table class="table table-dark table-striped table-hover" style="text-align: left !important;">
+    <thead></thead>
+    <tbody>
+        <tr *ngIf="itemResults.shippingInfo && itemResults.shippingInfo[0].shippingServiceCost && itemResults.shippingInfo[0].shippingServiceCost[0].__value__">
+            <td class="col-4 mobile-detail-table-linebreak">Shipping Cost</td>
+            <td class="col-8 mobile-detail-table-linebreak">{{ shipCostTrans(itemResults.shippingInfo[0].shippingServiceCost[0].__value__) }}</td>
+        </tr>
+        <tr *ngIf="itemResults.shippingInfo && itemResults.shippingInfo[0].shipToLocations">
+            <td class="col-4 mobile-detail-table-linebreak">Shipping Locations</td>
+            <td class="col-8 mobile-detail-table-linebreak">{{ itemResults.shippingInfo[0].shipToLocations[0] }}</td>
+        </tr>
+        <tr *ngIf="itemResults.shippingInfo && itemResults.shippingInfo[0].handlingTime">
+            <td class="col-4 mobile-detail-table-linebreak">Handling Time</td>
+            <td class="col-8 mobile-detail-table-linebreak">{{ handlingTrans(itemResults.shippingInfo[0].handlingTime[0]) }}</td>
+        </tr>
+        <tr *ngIf="itemResults.shippingInfo && itemResults.shippingInfo[0].expeditedShipping">
+            <td class="col-4 mobile-detail-table-linebreak">Expedited Shipping</td>
+            <td class="col-8 mobile-detail-table-linebreak">
+                <span class="material-symbols-outlined text-success" *ngIf="itemResults.shippingInfo[0].expeditedShipping[0] === 'true' ">done</span>
+                <span class="material-symbols-outlined text-danger" *ngIf="itemResults.shippingInfo[0].expeditedShipping[0] === 'false' ">close</span>
+            </td>
+        </tr>
+        <tr *ngIf="itemResults.shippingInfo && itemResults.shippingInfo[0].oneDayShippingAvailable">
+            <td class="col-4 mobile-detail-table-linebreak">One Day Shipping</td>
+            <td class="col-8 mobile-detail-table-linebreak">
+                <span class="material-symbols-outlined text-success" *ngIf="itemResults.shippingInfo[0].oneDayShippingAvailable[0] === 'true' ">done</span>
+                <span class="material-symbols-outlined text-danger" *ngIf="itemResults.shippingInfo[0].oneDayShippingAvailable[0] === 'false' ">close</span>
+            </td>
+        </tr>
+        <tr *ngIf="itemResults.returnsAccepted">
+            <td class="col-4 mobile-detail-table-linebreak">Return Accepted</td>
+            <td class="col-8 mobile-detail-table-linebreak">
+                <span class="material-symbols-outlined text-success" *ngIf="itemResults.returnsAccepted[0] === 'true' ">done</span>
+                <span class="material-symbols-outlined text-danger" *ngIf="itemResults.returnsAccepted[0] === 'false' ">close</span>
+            </td>
+        </tr>
+    </tbody>
+</table>

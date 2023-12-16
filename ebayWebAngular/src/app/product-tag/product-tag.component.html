@@ -1,0 +1,68 @@
+<!-- Modal HTML
+<div class="modal" id="imageModal" tabindex="-1" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Product Images</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div *ngFor="let imageURL of Item.PictureURL; let i = index" class="carousel-item" [ngClass]="{'active': i === 0}">
+                    <a href="{{ imageURL }}" target="_blank">
+                      <img [src]="imageURL" class="d-block w-100 border border-dark border-5" style="width: 300px; height: 400px;" alt="Image {{ i + 1 }}">
+                    </a>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<table class="table table-dark table-striped table-hover" style="text-align: left !important;">
+  <thead></thead>
+  <tbody>
+      <tr>
+        <td class="col-4 mobile-detail-table-linebreak">Product Images</td>
+        <td class="col-8 mobile-detail-table-linebreak"><a href="" class="no-underline-link" (click)="openDialog($event)">{{ imageMessageTrans() }}</a></td>
+      </tr>
+      <tr *ngIf="Item.CurrentPrice.Value">
+        <td class="col-4 mobile-detail-table-linebreak">Price</td>
+        <td class="col-8 mobile-detail-table-linebreak">{{ '$' + Item.CurrentPrice.Value }}</td>
+      </tr>
+      <tr *ngIf="Item.Location">
+        <td class="col-4 mobile-detail-table-linebreak">Location</td>
+        <td class="col-8 mobile-detail-table-linebreak">{{ Item.Location }}</td>
+      </tr>
+      <tr *ngIf="Item.ReturnPolicy">
+        <td class="col-4 mobile-detail-table-linebreak">Return Policy</td>
+        <td class="col-8 mobile-detail-table-linebreak">{{ returnPolicyTrans() }}</td>
+      </tr>
+      <tr *ngFor="let item of Item.ItemSpecifics.NameValueList">
+        <td class="col-4 mobile-detail-table-linebreak">{{ item.Name }}</td>
+        <td class="col-8 mobile-detail-table-linebreak">{{ item.Value[0] }}</td>
+      </tr>
+  </tbody>
+</table>
+        
+      
+  

@@ -1,0 +1,39 @@
+<table class="table table-dark table-striped table-hover" style="text-align: left !important;">
+    <thead><tr><th colspan="2" class="text-center fs-4 py-2">{{ Item.Seller.UserID }}</th></tr></thead>
+    <tbody>
+        <tr *ngIf="Item.Seller && Item.Seller.FeedbackScore !== undefined">
+            <td class="col-4 mobile-detail-table-linebreak">Feedback Score</td>
+            <td class="col-8 mobile-detail-table-linebreak">{{ Item.Seller.FeedbackScore }}</td>
+        </tr>
+        <tr *ngIf="Item.Seller && Item.Seller.PositiveFeedbackPercent !== undefined">
+            <td class="col-4 mobile-detail-table-linebreak">Popularity</td>
+            <td class="col-8 mobile-detail-table-linebreak" style="position: relative;">
+                <round-progress [color]="'green'" [background]="'white'" [radius]="20" [stroke]="3" [current]="Item.Seller.PositiveFeedbackPercent" [max]="100"></round-progress>
+                <span style="position: absolute; top: 50%; transform: translate(6px, -50%);"> {{ Item.Seller.PositiveFeedbackPercent }} </span>
+            </td>
+        </tr>
+        <tr *ngIf="Item.Seller && Item.Seller.FeedbackRatingStar !== undefined">
+            <td class="col-4 mobile-detail-table-linebreak">Feedback Rating Star</td>
+            <td class="col-8 mobile-detail-table-linebreak">
+                <span *ngIf="Item.Seller.FeedbackScore <= 9">N/A</span>
+                <span class="material-symbols-outlined fs-3" [ngStyle]="{'color': Item.Seller.FeedbackRatingStar}" *ngIf="Item.Seller.FeedbackScore > 9 && Item.Seller.FeedbackScore < 10000">star</span> 
+                <span class="material-icons fs-3" [ngStyle]="{'color': colorMappings[Item.Seller.FeedbackRatingStar]}" *ngIf="Item.Seller.FeedbackScore >= 10000">stars</span>
+            </td>
+        </tr>
+        <tr *ngIf="Item.Seller && Item.Seller.TopRatedSeller">
+            <td class="col-4 mobile-detail-table-linebreak">Top Rated</td>
+            <td class="col-8 mobile-detail-table-linebreak">
+                <span class="material-symbols-outlined text-success" *ngIf="Item.Seller.TopRatedSeller === true ">done</span>
+                <span class="material-symbols-outlined text-danger" *ngIf="Item.Seller.TopRatedSeller === false ">close</span>
+            </td>
+        </tr>
+        <tr *ngIf="Item.Storefront && Item.Storefront.StoreName">
+            <td class="col-4 mobile-detail-table-linebreak">Store Name</td>
+            <td class="col-8 mobile-detail-table-linebreak">{{ Item.Storefront.StoreName }}</td>
+        </tr>
+        <tr *ngIf="Item.Storefront && Item.Storefront.StoreURL">
+            <td class="col-4 mobile-detail-table-linebreak">Buy Product At</td>
+            <td class="col-8 mobile-detail-table-linebreak"><a [href]="Item.Storefront.StoreURL" target="_blank" class="no-underline-link">Store</a></td>
+        </tr>
+    </tbody>
+</table>

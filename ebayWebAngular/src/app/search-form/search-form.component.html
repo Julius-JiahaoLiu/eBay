@@ -1,0 +1,112 @@
+<div class="container w-75 mt-3 m-auto d-flex justify-content-center rounded-1 bg-dark align-middle mobile-form-container">  
+    <form id="search-form" [formGroup]="searchForm" (ngSubmit)="onSubmit()" class="w-50 text-light col-12 mobile-form-inner">
+      <br>
+      <div class="row py-3 fs-2">Product Search</div>
+      <div class="row py-2 mobile-form-row">
+        <label for="keyword" class="col-sm-4 px-0 col-6" for="keyword">Keyword<span class="text-danger">*</span></label>
+        <span class="col-8 d-block mobile-form-span">
+          <!-- For regular expression (?!)negative lookahead assertion \s* Matches any sequence of whitespace characters $ Asserts the end of the input .+ Requires at least one character after the negative lookahead -->
+          <input type="text" class="form-control" id="keyword" name="keyword" formControlName="keyword" required="required" 
+                    placeholder="Enter Product Name (eg. iPhone 8)" (blur)="searchForm.controls['keyword'].markAsDirty()">
+          <div *ngIf="(searchForm.get('keyword')?.dirty && searchForm.get('keyword')?.invalid)" class="text-danger">Please enter a keyword</div>
+        </span>
+      </div>
+    
+      <div class="row py-2 mobile-form-row">
+        <label class="col-sm-4 px-0 col-6" for="category">Category</label>
+        <span class="col-8 d-block mobile-form-span"> 
+          <select class="form-select mobile-form-selector" style="width: 35%" aria-label="Default select example" id="category" name="category" formControlName="selectedCategory">
+            <option value="All">All Categories</option>
+            <option value="Art">Art</option>
+            <option value="Baby">Baby</option>
+            <option value="Books">Books</option>
+            <option value="Clothing">Clothing, Shoes & Accessories</option>
+            <option value="Computers">Computers/Tablets & Networking</option>
+            <option value="Health">Health & Beauty</option>
+            <option value="Music">Music</option>
+            <option value="Video">Video Games & Consoles</option>
+          </select>
+        </span>
+      </div>
+    
+      <div class="row py-2 mobile-form-row">
+        <label class="col-sm-4 px-0 col-6" >Condition</label>
+        <span class="col-8 d-inline-block  mobile-form-span" formGroupName="condition">
+          <span class="form-check form-check-inline">
+            <input type="checkbox" id="new" class="form-check-input" name="new" formControlName="new" value="true"> 
+            <label class="form-check-label" for="new">New</label> 
+          </span>
+          <span class="form-check form-check-inline">
+            <input type="checkbox" id="used" class="form-check-input" name="used" formControlName="used" value="true"> 
+            <label class="form-check-label" for="used">Used</label>
+          </span>
+          <span class="form-check form-check-inline">
+            <input type="checkbox" id="unspecified" class="form-check-input" name="unspecified" formControlName="unspecified" value="true"> 
+            <label class="form-check-label" for="unspecified">Unspecified</label>
+          </span>
+        </span>
+      </div>
+    
+      <div class="row py-2 mobile-form-row">
+        <label class="col-sm-4 px-0 col-6">Shipping Options</label>
+        <span class="col-8 d-inline-block mobile-form-span" formGroupName="shippingOptions">
+          <span class="form-check form-check-inline">
+            <input type="checkbox" id="localPickup" class="form-check-input" name="localPickup" formControlName="localPickup" value="true">
+            <label class="form-check-label" for="localPickup">Local Pickup</label>
+          </span>
+          <span class="form-check form-check-inline">
+            <input type="checkbox" id="freeShipping" class="form-check-input" name="freeShipping" formControlName="freeShipping" value="true">
+            <label class="form-check-label" for="freeShipping">Free Shipping</label>
+          </span>
+        </span>
+      </div>
+    
+      <div class="row py-2 mobile-form-row">
+        <label class="col-sm-4 px-0 col-6">Distance (Miles):</label>
+        <span class="col-8 d-inline-block mobile-form-span">
+          <input type="number" id="distance" class="form-control mobile-form-selector" style="width: 35%" name="distance" formControlName="distance" [min]="0" step="1">
+        </span>
+      </div>
+    
+      <div class="row py-2 mobile-form-row">
+        <label class="col-sm-4 px-0 col-6">From<span class="text-danger">*</span></label>
+        <span class="col-8 d-block mobile-form-span">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" id="currentLocation" name="locationOption" formControlName="locationOption" (change)="disableZipCode()" value="currentLocation">
+            <label class="form-check-label" for="currentLocation">'Current Location'</label> 
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" id="otherLocation" name="locationOption" formControlName="locationOption" (change)="disableZipCode()" value="otherLocation"> 
+            <label class="form-check-label mobile-form-label" style="max-width: 60%;" for="otherLocation">Other. Please specify zip code:</label>
+          </div>
+          <div class="form-check px-0">
+            <input type="text" id="zipCode" class="form-control" name="zipCode" (input)="zipCodeAutoComplete(searchForm.get('zipCode')?.value)" 
+                      matInput formControlName="zipCode" [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let option of zipCodeSuggestions" [value]="option">
+                {{option}}
+              </mat-option>
+            </mat-autocomplete>
+          </div>
+          <div *ngIf="searchForm.get('zipCode')?.invalid && searchForm.get('zipCode')?.dirty" class="text-danger">
+            Please enter a valid 5-digit zip code
+          </div>
+        </span>
+      </div>
+    
+      <div class="row py-3">
+        <div class="ps-0 d-flex align-items-center">
+          <button type="button" class="btn btn-light d-flex align-items-center me-3" [disabled]="isSearchBtnDisabled()" (click)="onSubmit()">
+            <span class="material-icons">search</span>Search
+          </button>
+          <button type="button" class="btn btn-light d-flex align-items-center" (click)="clearForm()">
+            <span class="material-icons">clear_all</span>Clear
+          </button>
+        </div>
+      </div>
+    </form>
+</div>
+<br>
+<br>
+    <app-search-result [showResult]="showResult" [searchResults]="searchResults"></app-search-result>
+<br>

@@ -1,0 +1,50 @@
+<div class="container p-0" *ngIf="!isLoading && hasSimilarItems"> 
+    <div class="row m-1 d-inline">
+        <span ngbDropdown class="d-inline px-0 me-2 mobile-dropdownbtn">
+            <button type="button" class="btn btn-outline-secondary text-dark mobile-dropdownbtn" id="dropdownBasic1" ngbDropdownToggle>{{ sortingOptions }}</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button ngbDropdownItem (click)="setSorting('Default')">Default</button>
+                <button ngbDropdownItem (click)="setSorting('Product Name')">Product Name</button>
+                <button ngbDropdownItem (click)="setSorting('Days Left')">Days Left</button>
+                <button ngbDropdownItem (click)="setSorting('Price')">Price</button>
+                <button ngbDropdownItem (click)="setSorting('Shipping Cost')">Shipping Cost</button>
+            </div>
+        </span>
+        <span ngbDropdown class="d-inline px-0 mobile-dropdownbtn">
+            <button type="button" class="btn btn-outline-secondary text-dark mobile-dropdownbtn" id="dropdownBasic2" ngbDropdownToggle [disabled]="sortingOptions === 'Default'" [ngClass]="{'btn-disabled': sortingOptions === 'Default'}">{{ ascendingOptions }}</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+                <button ngbDropdownItem (click)="setAscending('Ascending')">Ascending</button>
+                <button ngbDropdownItem (click)="setAscending('Descending')">Descending</button>
+            </div>
+        </span>
+    </div>
+
+    <div class="row bg-dark py-2 m-1 rounded-2" *ngFor="let item of sortItems().slice(0, itemsToShow)">
+        <div class="col-3 d-flex flex-column mobile-similar-itemcard"> 
+            <ng-container *ngIf="item.imageURL && item.imageURL !== ''; else ebayDefault " >
+                <a href="{{ item.imageURL }}" target="_blank"><img [src]="item.imageURL" alt="Item Image" style="padding: 10px 5px; width: 150px; height: 150px;"></a>
+              </ng-container>
+              <ng-template #ebayDefault>
+                  <a href="https://csci571.com/hw/hw6/images/ebay_default.jpg" target="_blank"><img src="assets/ebay_default.jpg" alt="ebay_default" style="padding: 10px 5px; width: 150px; height: 150px;"></a>
+              </ng-template>
+        </div>
+        <div class="col-9 d-flex flex-column mobile-similar-itemcard">
+            <div class="m-1">
+                <a *ngIf="item.viewItemURL" href="{{ item.viewItemURL }}" target="_blank" class="no-underline-link">{{ item.title }}</a>
+                <span *ngIf="item.viewItemURL === undefined" style="color: rgba(109,153,154,255);">{{ item.title }}</span>
+            </div>
+            <div class="m-1" style="color: rgba(174,205,175,255);">Price: ${{ item.buyItNowPrice.__value__ }}</div>
+            <div class="m-1" style="color: rgba(209,185,122,255);">Shipping Cost: ${{ item.shippingCost.__value__ }}</div>
+            <div class="m-1" style="color: rgba(237,237,238,255);">Days Left: {{ daysTrans(item.timeLeft) }}</div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <button class="btn btn-dark m-2 " *ngIf="similarItems.length > 5" (click)="changeButton()">
+            {{ showMore ? 'Show Less' : 'Show More' }}
+        </button>
+    </div>
+</div>
+
+<div class="px-0" *ngIf="!isLoading && !hasSimilarItems">
+    <ngb-alert [dismissible]="false">No Records.</ngb-alert>
+</div>

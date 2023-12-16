@@ -1,0 +1,22 @@
+@media (max-width: 432px) { /* iPhone 12 Pro with 390px iPhone XXX Pro Max 430px */
+    .mobile-form-container{
+        width: 370px !important;
+    }
+    .mobile-form-inner{
+        width: 300px !important;
+    }
+    .mobile-form-row{
+        display: block !important;
+    }
+    .mobile-form-span{
+        padding: 4px 0px !important;
+        width: 320px !important;
+    }
+    .mobile-form-selector{
+        display: block !important;
+        width: 100% !important;
+    }
+    .mobile-form-label{
+        max-width: 100% !important;
+    }
+}

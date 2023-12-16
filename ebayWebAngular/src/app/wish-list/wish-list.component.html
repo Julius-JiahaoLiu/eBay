@@ -1,0 +1,66 @@
+<div class="progress" *ngIf="loading">
+    <div class="progress-bar progress-bar-striped progress-bar-animated w-50" role="progressbar" style="width: 50%"></div>
+</div>
+<div class="container" *ngIf="!hasRecords && !showDetails">
+    <ngb-alert [dismissible]="false">No Records.</ngb-alert>
+</div>
+<div class="container" *ngIf="!loading && hasRecords && !showDetails">
+    <div class="row justify-content-end py-3">
+        <button type="button" class="btn btn-light col-sm-1 col-3" style="white-space: nowrap;" [disabled]="!hasDetails" (click)="toPreDetails()">Detail > </button>
+    </div>
+    <div class="mobile-wishlist-table-container">
+        <table *ngIf="hasRecords" class="table table-striped table-hover" style="text-align: left !important;">
+            <thead>
+                <tr class="table-dark">
+                <th>#</th> <th>Image</th> <th>Title</th> 
+                <th>Price</th> <th>Shipping</th> <th>Wish List</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of wishListItems; let i = index " [ngClass]="{'table-light': hasDetails && item.ItemID === itemDetails?.Item?.ItemID, 'table-dark': !hasDetails || item.ItemID != itemDetails?.Item?.ItemID}">
+                    <td>{{ i + 1 }}</td>
+                    <td>
+                        <ng-container *ngIf="item.Image && item.Image !== ''; else ebayDefault " >
+                            <a href="{{ item.Image }}" target="_blank"><img [src]="item.Image" alt="Item Image" style="width: 100px; height: 100px;"></a>
+                        </ng-container>
+                        <ng-template #ebayDefault>
+                            <a href="https://csci571.com/hw/hw6/images/ebay_default.jpg" target="_blank"><img src="assets/ebay_default.jpg" alt="ebay_default" style="width: 100px; height: 100px;"></a>
+                        </ng-template>
+                    </td>
+                    <td><a style="text-decoration: none;" [title]="item.Title" data-toggle="tooltip" data-placement="top" href="javascript:void(0)" 
+                            (click)="searchDetails(item.ItemID)">{{ truncateTitle(item.Title, 35) }}</a></td>
+                    <td>{{ item.Price }}</td>
+                    <td>{{ item.Shipping }}</td>
+                    <td>
+                        <button class="btn btn-light" (click)="removeWishList(item.ItemID)">
+                            <span class="material-symbols-outlined" style="color: rgb(184,148,64)">remove_shopping_cart</span>
+                        </button>
+                    </td>
+                </tr>
+                <tr class="table-dark"><td></td><td></td><td></td><td></td>
+                    <td class="fw-bold">Total Shopping</td>
+                    <td class="fw-bold">{{'$' + sumitems()}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div *ngIf="!loading && showDetails && hasDetails" class="mobile-wishlist-detail-container">
+    <div class="mx-auto p-2 text-center">{{ itemDetails.Item.Title }}</div>
+    <div class="d-flex mb-3">
+      <button type="button" class="btn btn-light me-auto" style="height: 40px;" (click)="showResults()"> < List </button>
+      <button type="button" style="height: 40px; align-items: center; border: 0; padding: 0;" (click)="facebookShare()"> <img style="width: 40px; height: 40px;" src="assets/facebook.png" alt="facebook"></button>
+      <ng-container *ngIf="inWishList(itemDetails.Item.ItemID); else notInWishList">
+        <button class="btn btn-light" style="height: 40px; align-items: center;" (click)="removeWishList(itemDetails.Item.ItemID)">
+          <span class="material-symbols-outlined" style="color: rgb(184,148,64)">remove_shopping_cart</span>
+        </button>
+      </ng-container>
+      <ng-template #notInWishList>
+        <button class="btn btn-light" style="height: 40px; align-items: center;" (click)="addWishList()">
+          <span class="material-symbols-outlined">add_shopping_cart</span>
+        </button>
+      </ng-template>
+    </div>
+    <app-wish-list-detail [itemDetails]="itemDetails" [itemResults]="itemResults"></app-wish-list-detail>
+</div>  

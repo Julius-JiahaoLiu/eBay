@@ -1,0 +1,191 @@
+html {
+  font-family: serif;
+}
+/* -------------------------------- */
+.ebay_search{
+  padding-top: 1rem;
+  max-width: 500px;
+  margin: 0 auto; /* center the page */
+  background: white; 
+}
+.ebay_search #ebay_logo{
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center align items horizontally */
+}
+.ebay_search #ebay_logo img{
+  width: 120px;
+  height: 50px;
+  margin-right: 5px;
+}
+.ebay_search #ebay_logo h1{
+  font-size: 25px;
+}
+#information_form{
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+.form_lines{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 0;
+  border-bottom: 1px solid lightgray;
+}
+.form_lines:last-child {
+  border-bottom: 1px solid black; /* Change the border color for the last .form_lines */
+}
+.form_lines #red_star{
+  color: red;
+}
+.form_lines label{
+  font-weight: bold;
+  margin-right: 10px;
+}
+.form_lines p{
+  margin: 0 3px;
+}
+.form_lines .long_input{
+  margin: 0 3px;
+  width: 140px;
+}
+.form_lines .short_input{
+  margin: 0 3px;
+  width: 55px;
+}
+.form_lines input[type="checkbox"] {
+  margin: 0 6px; 
+}
+.form_lines input[type="checkbox"]:checked {
+  color: rgba(1,117,251,255); 
+}
+#sort_by option {
+  text-align: center;
+}
+.form_lines input[type="button"]{
+  margin: 0 3px;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  color: black;
+  border-radius: 3px;
+  transition-duration: 0.4s;
+  cursor: pointer; 
+}
+.form_lines input[type="button"]:hover{
+  background-color: #4CAF50;
+  color: white;
+}
+/* ------------------------ */
+
+.search_results{
+  max-width: 800px;
+  margin: 1rem auto; /* center the page */
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  text-align: center;
+}
+.item_card{
+  display: flex; 
+  align-items: center;
+  border: 1px solid rgba(138,135,138,255);
+  background-color: rgba(245,245,245,255);
+  margin: 6px 0;
+  width: 800px;
+  height: 200px;
+  transition: background-color 0.3s; /* Add a smooth transition for background color changes */
+  border-radius: 6px; /* Add rounded corners */
+}
+.item_card:hover{
+  box-shadow: 0 0 10px rgba(138,135,138,255);
+}
+.left_part{
+  flex: 1;
+  width: 200px;
+  height: 200px;
+  display: flex; /* Enable flex layout for centering vertically */
+  flex-direction: column; /* Stack child divs vertically */
+  justify-content: center; /* Center-align vertically */
+  align-items: center; /* Center-align horizontally */
+}
+.left_part img{
+  max-width: 60%; /* Set the maximum width to 60% of the parent container */
+  max-height: 60vh; /* Set the maximum height to 60% of the viewport height */
+  width: auto; 
+  height: auto; 
+  border: 2px solid rgba(169,169,168,255);
+  transition: transform 0.3s;
+}
+.left_part img:hover{
+  transform: scale(2.0); /* Add a zoom effect on hover */
+}
+.right_part{
+  flex: 3;
+  width: 600px;
+  height: 200px;
+  padding-left: 20px;
+  text-align: left;
+  display: flex; /* Enable flex layout for centering vertically */
+  flex-direction: column; /* Stack child divs vertically */
+  justify-content: center; /* Center-align vertically */
+}
+.right_part > div {
+  padding: 10px; /* Add bottom padding between div elements */
+}
+
+.search_results > button{
+  margin: 10px 3px;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  color: black;
+  border-radius: 3px;
+  transition-duration: 0.4s;
+  cursor: pointer; 
+}
+.search_results > button:hover{
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* ------------------------ */
+.form_container{
+  border-top: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+}
+.detail_lines{
+  display: flex; 
+  align-items: stretch; /* Ensure both two columns stretch to the same height */
+  border-bottom: 1px solid lightgray;
+}
+.label_part{
+  flex: 1;
+  text-align: left;
+  padding-left: 10px;
+  font-weight: bold;
+  display: flex; /* Enable flex layout for centering vertically */
+  flex-direction: column; /* Stack child divs vertically */
+  justify-content: center; /* Center-align vertically */
+}
+.value_part{
+  flex: 3;
+  text-align: left;
+  display: flex; /* Enable flex layout for centering vertically */
+  flex-direction: column; /* Stack child divs vertically */
+  align-items: flex-start; /* Left-align horizontally */
+  justify-content: center; /* Center-align vertically */
+  border-left: 1px solid lightgray;
+  padding-left: 10px;
+}
+.value_part img{
+  max-width: 200px; 
+  max-height: 200px; 
+  width: auto; 
+  height: auto; 
+  padding: 5px;
+  align-self: flex-start;
+}
+.value_part span{
+  align-self: flex-start;
+}

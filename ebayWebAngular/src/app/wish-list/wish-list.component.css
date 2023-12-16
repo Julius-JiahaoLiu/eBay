@@ -1,0 +1,14 @@
+@media (max-width: 432px) { /* iPhone 12 Pro with 390 844 px */
+    .mobile-wishlist-table-container{
+      margin: 0 5px !important;
+      overflow-x: auto !important; /* 允许水平滚动 */
+      width: 100% !important; 
+      max-width: 100% !important; 
+      white-space: nowrap !important;
+    }
+    .mobile-wishlist-detail-container{
+      padding: 0 7px !important;
+      width: 100% !important; 
+      max-width: 100% !important; 
+    }
+}

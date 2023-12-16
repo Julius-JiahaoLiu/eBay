@@ -1,0 +1,65 @@
+<!doctype html>
+<title>ebay_search</title>
+<head>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+<section class="ebay_search">
+  <div id="ebay_logo">
+    <a href="https://www.ebay.com/">
+      <img src="https://csci571.com/hw/hw6/images/eBayLogo.png"> 
+    </a>
+    <h1>Shopping</h1>
+  </div>
+  <form id="information_form" autocomplete="off">
+    <div class="form_lines">
+      <label for="keyword">Keywords<span id="red_star">*</span>:</label>
+      <input name="keyword" id="keyword" class="long_input" required>
+    </div>
+    <div class="form_lines">
+      <label>Price Range:</label>
+      <p>From</p> 
+      <input type="number" name="priceFrom" id="priceFrom" class="short_input">
+      <p>to</p>
+      <input type="number" name="priceTo" id="priceTo" class="short_input">
+    </div>
+    <div class="form_lines">
+      <label>Condition:</label>
+      <input type="checkbox" name="condition_new" id="condition_new" value="1000">New 
+      <input type="checkbox" name="condition_used" id="condition_used" value="3000"> Used
+      <input type="checkbox" name="condition_verygood" id="condition_verygood" value="4000">verygood 
+      <input type="checkbox" name="condition_good" id="condition_good" value="5000">good
+      <input type="checkbox" name="condition_acceptable" id="condition_acceptable" value="6000">acceptable
+    </div>
+    <div class="form_lines">
+      <label>Seller:</label>
+      <input type="checkbox" name="seller_return" id="seller_return" value="true">Return Accepted
+    </div>
+    <div class="form_lines">
+      <label>Shipping:</label>
+      <input type="checkbox" name="shipping_free" id="shipping_free" value="true">Free
+      <input type="checkbox" name="shipping_expedited" id="shipping_expedited" value="Expedited">Expedited
+    </div>
+    <div class="form_lines">
+      <label>Sort by:</label>
+      <select name="sort_by" id="sort_by">
+        <option value="BestMatch">Best Match</option>
+        <option value="CurrentPriceHighest">Price: highest first</option>
+        <option value="PricePlusShippingHighest">Price + Shipping: highest first</option>
+        <option value="PricePlusShippingLowest">Price + Shipping: lowest first</option>
+      </select>
+    </div>
+    <div class="form_lines">
+      <input type="button" value="Clear" onclick="ClearForm()">
+      <input type="button" value="Search" onclick="SubmitForm()">
+    </div>
+  </form>
+</section>
+
+<section class="search_results"></section>
+
+<script src="/static/script.js"></script>
+</body>
+
+</html>

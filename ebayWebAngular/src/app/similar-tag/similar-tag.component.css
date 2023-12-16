@@ -1,0 +1,24 @@
+.no-underline-link {
+    text-decoration: none; /* Remove the underline by default */
+    color: rgba(109, 153, 154, 255); /* Text color */
+  }
+.no-underline-link:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+.btn-disabled{
+  background-color: rgba(230,235,238,255);
+}
+
+@media (max-width: 432px){
+  .mobile-dropdownbtn{
+    display: block !important;
+    width: 100% !important;
+    text-align: left !important;
+    margin: 0px !important;
+  }
+  .mobile-similar-itemcard{
+    display: block !important;
+    width: 100% !important;
+    text-align: left !important;
+  }
+}

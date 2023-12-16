@@ -1,0 +1,35 @@
+<script>
+    $(document).ready(function () {
+      $('#imageCarousel').carousel();   // Initialize the carousel
+    });
+</script>
+<div class="bg-white mobile-" style="width: 310px;"> 
+  <div class="d-flex flex-row justify-content-between">
+      <h4 mat-dialog-title class="text-dark">Product Images</h4>
+      <mat-dialog-actions>
+          <button mat-button mat-dialog-close class="btn text-secondary"><span class="material-symbols-outlined">close</span></button>
+      </mat-dialog-actions>
+  </div>
+  <hr>
+  <div id="imageCarousel" class="carousel slide mx-auto" data-ride="carousel">
+      <div class="carousel-inner">
+        <div *ngFor="let imageURL of data.imageURLs; let i = index" class="carousel-item" [ngClass]="{'active': i === 0}">
+          <a href="{{ imageURL }}" target="_blank">
+            <img [src]="imageURL" class="d-block border border-dark border-5 rounded mx-auto" style="width: 300px; height: 300px;" alt="Image {{ i + 1 }}">
+          </a>
+        </div>
+        <button class="carousel-control-prev bg-secondary text-white" type="button" style="width: 20px; height: 20px; top: 48%; left: 10%" data-bs-target="#imageCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next bg-secondary text-white" type="button" style="width: 20px; height: 20px; top: 48%; right: 10%" data-bs-target="#imageCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+  </div>
+  <hr>
+  <mat-dialog-actions class="d-flex flex-row justify-content-end">
+      <button mat-button mat-dialog-close class="btn btn-secondary bg-secondary text-white">Close</button>
+  </mat-dialog-actions>
+</div>

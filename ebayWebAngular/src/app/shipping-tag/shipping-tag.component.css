@@ -1,0 +1,9 @@
+@media (max-width: 432px){
+    .mobile-detail-table-linebreak{
+        width: 100% !important;
+        display: block !important;
+        white-space: nowrap !important; 
+        /* flex-wrap: wrap !important;
+        flex-direction: column !important;    */
+    }
+}

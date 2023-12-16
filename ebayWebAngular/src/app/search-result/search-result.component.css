@@ -1,0 +1,63 @@
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+}
+.page-link{
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  padding: 4px 10px;
+}
+.page-link:hover {
+  text-decoration: underline;
+  background-color: rgba(229,229,229,255);
+}
+.page-link[disabled] {
+  color: lightgray;
+}
+.page-link[disabled]:hover {
+    cursor: not-allowed;
+    background-color: white;
+    text-decoration: none;
+}
+.current-page-button{
+    background-color: rgba(30,154,232,255);
+    color: white;
+}
+.current-page-button:hover{
+    background-color: rgba(30,154,232,255);
+    color: white;
+}
+.no-underline-link {
+  text-decoration: none; /* Remove the underline by default */
+}
+.no-underline-link:hover {
+text-decoration: underline; /* Add underline on hover */
+}
+
+@media (max-width: 432px) { /* iPhone 12 Pro with 390 844 px */
+  .mobile-result-container{
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0px !important;
+    margin: 10px 0px !important;
+  }
+  .mobile-result-table-container{
+    margin: 0 5px !important;
+    overflow-x: auto !important; /* 允许水平滚动 */
+    width: 100% !important; 
+    max-width: 100% !important; 
+    white-space: nowrap !important;
+  }
+  .mobile-result-pagination{
+    max-width: 100% !important;
+  }
+  .mobile-result-detail-container{
+    padding: 0 7px !important;
+    width: 100% !important; 
+    max-width: 100% !important; 
+  }
+}

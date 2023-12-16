@@ -1,0 +1,88 @@
+<div class="container w-75 mobile-result-container">
+    <div class="text-center">
+        <button type="button" class="btn me-3" [ngClass]="{'btn-dark': isResultsChosen, 'btn-white': !isResultsChosen}" (click)="showResults()">Results</button>
+        <button type="button" class="btn" [ngClass]="{'btn-dark': isFavoritesChosen, 'btn-white': !isFavoritesChosen}" (click)="showWishList()">Wish List</button>
+    </div> 
+    <div class="py-3" *ngIf="showResult && !isFavoritesChosen">
+        <div class="progress" *ngIf="loading">
+          <div class="progress-bar progress-bar-striped progress-bar-animated w-50" role="progressbar" style="width: 50%"></div>
+        </div>
+        <div class="container" *ngIf="!loading && !hasResults">
+          <ngb-alert [dismissible]="false">No Records.</ngb-alert>
+        </div>
+        <div class="container" *ngIf="!loading && hasResults && !showDetails">
+            <div class="row justify-content-end py-3">
+                <button type="button" class="btn btn-light col-sm-1 col-3" style="white-space: nowrap;" [disabled]="!hasDetails" (click)="toPreDetails()">Detail > </button>
+            </div>
+            <div class="mobile-result-table-container">
+              <table class="table table-striped table-hover" style="text-align: left !important;">
+                <thead>
+                  <tr class="table-dark">
+                    <th>#</th> <th>Image</th> <th>Title</th> 
+                    <th>Price</th> <th>Shipping</th> <th>Zip</th> <th>Wish List</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of pagedData; let i = index " [ngClass]="{'table-light': hasDetails && item.itemId[0] === itemDetails?.Item?.ItemID, 'table-dark': !hasDetails || item.itemId[0] != itemDetails?.Item?.ItemID}">
+                    <td>{{ i + 1 + (currentPage-1) * pageSize }}</td>
+                    <td>
+                      <ng-container *ngIf="item.galleryURL && item.galleryURL[0] !== ''; else ebayDefault " >
+                        <a href="{{ item.galleryURL }}" target="_blank"><img [src]="item.galleryURL" alt="Item Image" style="width: 100px; height: 100px;"></a>
+                      </ng-container>
+                      <ng-template #ebayDefault>
+                          <a href="https://csci571.com/hw/hw6/images/ebay_default.jpg" target="_blank"><img src="assets/ebay_default.jpg" alt="ebay_default" style="width: 100px; height: 100px;"></a>
+                      </ng-template>
+                    </td>
+                    <td><a class="no-underline-link" [title]="item.title[0]" data-toggle="tooltip" data-placement="top" href="javascript:void(0)" 
+                            (click)="searchDetails(item.itemId[0], i+(currentPage-1)*pageSize)">{{ truncateTitle(item.title[0], 35) }}</a></td>
+                    <td>{{ priceTrans(item.sellingStatus[0]) }}</td>
+                    <td>{{ shipCostTrans(item.shippingInfo[0]) }}</td>
+                    <td>{{ postalCodeTrans(item.postalCode[0]) }}</td>
+                    <td>
+                      <ng-container *ngIf="inWishList(item.itemId[0]); else notInWishList">
+                        <button class="btn btn-light" (click)="removeWishList(item.itemId[0])">
+                          <span class="material-symbols-outlined" style="color: rgb(184,148,64)">remove_shopping_cart</span>
+                        </button>
+                      </ng-container>
+                      <ng-template #notInWishList>
+                        <button class="btn btn-light" (click)="addWishList(item.itemId[0])">
+                          <span class="material-symbols-outlined">add_shopping_cart</span>
+                        </button>
+                      </ng-template>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="pagination-container">
+              <button class="page-link" (click)="previousPage()" [disabled]="currentPage === 1"> << Previous</button>
+              <ng-container *ngFor="let page of pages">
+                  <button class="page-link" [ngClass]="{'current-page-button': page === currentPage}" (click)="goToPage(page)">{{ page }}</button>
+              </ng-container>
+              <button class="page-link" (click)="nextPage()" [disabled]="currentPage === totalPages">Next >></button>
+            </div>
+        </div>  
+        <div *ngIf="!loading && showDetails && hasDetails" class="mobile-result-detail-container">
+          <div class="mx-auto p-2 text-center">{{ itemDetails.Item.Title }}</div>
+          <div class="d-flex mb-3">
+            <button type="button" class="btn btn-light me-auto" style="height: 40px;" (click)="showResults()"> < List </button>
+            <button type="button" style="height: 40px; align-items: center; border: 0; padding: 0;" (click)="facebookShare()"> <img style="width: 40px; height: 40px;" src="assets/facebook.png" alt="facebook"></button>
+            <ng-container *ngIf="inWishList(itemDetails.Item.ItemID); else notInWishList">
+              <button class="btn btn-light" style="height: 40px; align-items: center;" (click)="removeWishList(itemDetails.Item.ItemID)">
+                <span class="material-symbols-outlined" style="color: rgb(184,148,64)">remove_shopping_cart</span>
+              </button>
+            </ng-container>
+            <ng-template #notInWishList>
+              <button class="btn btn-light" style="height: 40px; align-items: center;" (click)="addWishList(itemDetails.Item.ItemID)">
+                <span class="material-symbols-outlined">add_shopping_cart</span>
+              </button>
+            </ng-template>
+          </div>
+          <app-search-detail [itemDetails]="itemDetails" [itemResults]="itemResults"></app-search-detail>
+        </div>  
+    </div>
+
+    <div class="py-3" *ngIf="isFavoritesChosen">
+        <app-wish-list [isFavoritesChosen]="isFavoritesChosen"></app-wish-list>
+    </div>
+</div>
