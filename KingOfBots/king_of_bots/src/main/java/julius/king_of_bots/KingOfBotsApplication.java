@@ -8,5 +8,4 @@ public class KingOfBotsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(KingOfBotsApplication.class, args);
 	}
-
 }
