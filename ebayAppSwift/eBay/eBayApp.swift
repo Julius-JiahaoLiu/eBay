@@ -1,6 +1,5 @@
 //
-//  HW4App.swift
-//  HW4
+//  eBayApp.swif
 //
 //  Created by 刘珈豪 on 2023/11/11.
 //
@@ -8,7 +7,7 @@
 import SwiftUI
 
 @main
-struct HW4App: App {
+struct eBayApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

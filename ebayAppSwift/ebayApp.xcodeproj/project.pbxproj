@@ -10,7 +10,7 @@
 		913F48682B10620800583DD5 /* favoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913F48672B10620800583DD5 /* favoritesView.swift */; };
 		9159D6C22B11115F00C5E7E9 /* searchDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159D6C12B11115F00C5E7E9 /* searchDetailModel.swift */; };
 		9159D6C42B11761200C5E7E9 /* infoTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159D6C32B11761200C5E7E9 /* infoTabView.swift */; };
-		9181BF352B00482800C28A19 /* HW4App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9181BF342B00482800C28A19 /* HW4App.swift */; };
+		9181BF352B00482800C28A19 /* eBayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9181BF342B00482800C28A19 /* eBayApp.swift */; };
 		9181BF372B00482800C28A19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9181BF362B00482800C28A19 /* ContentView.swift */; };
 		9181BF392B00482A00C28A19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9181BF382B00482A00C28A19 /* Assets.xcassets */; };
 		9181BF3C2B00482A00C28A19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9181BF3B2B00482A00C28A19 /* Preview Assets.xcassets */; };
@@ -39,7 +39,7 @@
 		9159D6C12B11115F00C5E7E9 /* searchDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchDetailModel.swift; sourceTree = "<group>"; };
 		9159D6C32B11761200C5E7E9 /* infoTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoTabView.swift; sourceTree = "<group>"; };
 		9181BF312B00482800C28A19 /* eBay Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eBay Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9181BF342B00482800C28A19 /* HW4App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW4App.swift; sourceTree = "<group>"; };
+		9181BF342B00482800C28A19 /* eBayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eBayApp.swift; sourceTree = "<group>"; };
 		9181BF362B00482800C28A19 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9181BF382B00482A00C28A19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9181BF3B2B00482A00C28A19 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 		9181BF282B00482800C28A19 = {
 			isa = PBXGroup;
 			children = (
-				9181BF332B00482800C28A19 /* HW4 */,
+				9181BF332B00482800C28A19 /* eBay */,
 				9181BF322B00482800C28A19 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,7 +97,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9181BF332B00482800C28A19 /* HW4 */ = {
+		9181BF332B00482800C28A19 /* eBay */ = {
 			isa = PBXGroup;
 			children = (
 				91AF37EA2B0D7A010074AA09 /* mongodbModel.swift */,
@@ -106,13 +106,13 @@
 				91AF37D82B0BD57D0074AA09 /* SearchResultViews */,
 				91A0CEFF2B059CAE0007D46F /* SearchFormViews */,
 				9124F2462B02EF4900246239 /* Info.plist */,
-				9181BF342B00482800C28A19 /* HW4App.swift */,
+				9181BF342B00482800C28A19 /* eBayApp.swift */,
 				9181BF362B00482800C28A19 /* ContentView.swift */,
 				9181BF382B00482A00C28A19 /* Assets.xcassets */,
 				9181BF3A2B00482A00C28A19 /* Preview Content */,
 				91AF37DD2B0BEF080074AA09 /* ebayLaunchScreen.storyboard */,
 			);
-			path = HW4;
+			path = eBay;
 			sourceTree = "<group>";
 		};
 		9181BF3A2B00482A00C28A19 /* Preview Content */ = {
@@ -196,7 +196,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9181BF2C2B00482800C28A19 /* Build configuration list for PBXProject "HW4" */;
+			buildConfigurationList = 9181BF2C2B00482800C28A19 /* Build configuration list for PBXProject "eBayApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -251,7 +251,7 @@
 				91EB6FBA2B13324300C9F832 /* similarTabView.swift in Sources */,
 				91AF37D22B09EB330074AA09 /* searchFormModel.swift in Sources */,
 				9159D6C22B11115F00C5E7E9 /* searchDetailModel.swift in Sources */,
-				9181BF352B00482800C28A19 /* HW4App.swift in Sources */,
+				9181BF352B00482800C28A19 /* eBayApp.swift in Sources */,
 				91EB6FB82B132E5900C9F832 /* searchSimilarModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,10 +385,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"HW4/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"eBay/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HW4/Info.plist;
+				INFOPLIST_FILE = eBay/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "this app requires user location!";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "this app requires user location!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -416,10 +416,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"HW4/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"eBay/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HW4/Info.plist;
+				INFOPLIST_FILE = eBay/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "this app requires user location!";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "this app requires user location!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -443,7 +443,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9181BF2C2B00482800C28A19 /* Build configuration list for PBXProject "HW4" */ = {
+		9181BF2C2B00482800C28A19 /* Build configuration list for PBXProject "eBayApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9181BF3D2B00482A00C28A19 /* Debug */,
